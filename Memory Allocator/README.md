@@ -1,9 +1,9 @@
-----
-##Memory Allocator
+# Memory Allocator
 
-To check it out, use the following functions in test.c
+This folder contains the code for `mem_alloc` header file. This header file is used to simulate the functioning of a memory allocator through a set of APIs listed below
 
-While compiling test.c, make sure to add mem_alloc.o as an argument
+## APIs provided
+---
 
 1.**int Mem_Init(int size_of_region)**
 
@@ -25,3 +25,9 @@ This function returns 1 if ptr falls within a currently allocated object and 0 i
 5.**int Mem_GetSize(void \*ptr)**
 
 If ptr falls within the range of a currently allocated object, then this function returns the size in bytes of that object; otherwise, the function returns -1.
+
+## How to run the sample program: `test.c`
+
+----
+    $ gcc test.c mem_alloc.c
+    $ ./a.out

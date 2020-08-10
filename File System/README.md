@@ -1,7 +1,9 @@
 
-
-
 # File System
+
+This folder contains the code for `LibDisk` header file. This header file provides APIs for simulating the function of a File System.
+
+The following are the set of APIs provided by it:
 
 ## Generic APIs
 
@@ -59,7 +61,7 @@
     Removes a directory referred to by path, freeing up its inode and data blocks, and removing its entry from the parent directory. Upon success, returns 0. Note: Dir_Unlink() is only successful if there are no files within the directory. If there are still files within the directory, it returns -1 and sets osErrno to E_DIR_NOT_EMPTY. It the directory referred is the root directory, returns -1 and sets osErrno to E_ROOT_DIR.
 
 
-## How to run main.c
+## How to run the sample program: `main.c`
 
 ----
     $ gcc LibDisk.c Helpers.c LibFS.c main.c
