@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "mem_alloc.h"
 
-void *head;
 typedef unsigned long ul;
 
 int main()
 {
+	void *head;
 	Mem_Init(4096);
 	printf("head : %lu\n", (ul)head);
 	int *a = (int *)Mem_Alloc(4);
